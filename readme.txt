@@ -5,8 +5,8 @@ Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 9.0
+Tested up to: 3.5
+Stable tag: 9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,9 +47,13 @@ Send link to friend WordPress plug-in will create a simple form in the website t
   
 == Upgrade Notice ==
 
+= 9.1 =
+
+Tested up to 3.5
+
 = 9.0 =
 
-New demo link, www.gopiplus.com
+New demo link, http://www.gopiplus.com
 
 = 8.0 =
 
@@ -97,9 +101,13 @@ This is the first version.
 
 == Changelog ==
 
+= 9.1 =
+
+Tested up to 3.5
+
 = 9.0 =
 
-New demo link, www.gopiplus.com
+New demo link, http://www.gopiplus.com
 
 = 8.0 =
 

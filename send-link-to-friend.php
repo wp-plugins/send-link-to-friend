@@ -4,7 +4,7 @@
 Plugin Name: Send link to friend
 Description: If user thought the page is useful to their friend, he can send the page link using this plug-in.
 Author: Gopi.R
-Version: 9.0
+Version: 9.1
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
