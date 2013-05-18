@@ -4,9 +4,9 @@ Tags: send link to friend, send to friend, email to friend
 Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 9.1
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 10.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,10 @@ Send link to friend WordPress plug-in will create a simple form in the website t
 [Answer](http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/) 
   
 == Upgrade Notice ==
+
+= 10.0 =
+
+Tested up to 3.6
 
 = 9.1 =
 
@@ -100,6 +104,10 @@ This is the first version.
 2. [Click to see front end live demo](http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/)
 
 == Changelog ==
+
+= 10.0 =
+
+Tested up to 3.6
 
 = 9.1 =
 
