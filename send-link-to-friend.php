@@ -4,7 +4,7 @@
 Plugin Name: Send link to friend
 Description: If user thought the page is useful to their friend, he can send the page link using this plug-in.
 Author: Gopi.R
-Version: 10.0
+Version: 10.1
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
@@ -127,9 +127,8 @@ function gSendtofriend_widget($args)
 	
 function gSendtofriend_control() 
 {
-	echo '<p>To change the setting go to Send link to friend link on Setting menu.';
-	echo '<br><a href="options-general.php?page=send-link-to-friend/setting.php">';
-	echo 'click here</a>.</p>';
+	echo '<p>To change the setting, Go to <b>Send link to friend</b> page on <b>Settings</b> menu.';
+	echo '<br><a href="options-general.php?page=send-link-to-friend">click here</a>.</p>';
 }
 
 function gSendtofriend_widget_init()
@@ -147,19 +146,20 @@ function gSendtofriend_widget_init()
 
 function gSendtofriend_deactivation() 
 {
-
+	// No action required.
 }
 
 function gSendtofriend_admin_options()
 {
-	include_once("setting.php");
+	global $wpdb;
+	include_once("content-setting.php");
 }
 
 function gSendtofriend_add_to_menu() 
 {
 	if (is_admin()) 
 	{
-		add_options_page('Send link to friend', 'Send link to friend', 'manage_options', __FILE__, 'gSendtofriend_admin_options' );
+		add_options_page('Send link to friend', 'Send link to friend', 'manage_options', 'send-link-to-friend', 'gSendtofriend_admin_options' );
 	}
 }
 
