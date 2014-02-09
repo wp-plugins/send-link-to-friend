@@ -5,8 +5,8 @@ Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 10.1
+Tested up to: 3.8
+Stable tag: 10.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,12 @@ Send link to friend WordPress plug-in will create a simple form in the website t
 [Answer](http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/) 
   
 == Upgrade Notice ==
+
+= 10.2 =
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (send-link-to-friend.po) available in the languages folder.	
 
 = 10.1 =
 
@@ -104,11 +110,17 @@ This is the first version.
 
 == Screenshots ==
 
-1. Admin Management. http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
+1. Front page screen. http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 
-2. [Click to see front end live demo](http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/)
+2. Admin page screen. http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 
 == Changelog ==
+
+= 10.2 =
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (send-link-to-friend.po) available in the languages folder.
 
 = 10.1 =
 

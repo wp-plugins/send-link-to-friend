@@ -35,15 +35,18 @@
 		{
 			@wp_mail($to_email, "Recommended Link", $to_message, $headers);
 			//unset($_SESSION['sendlinktofriend_code']);
-			echo "Mail sent successfully.";
+			//echo "Mail sent successfully.";
+			_e('Mail sent successfully.', 'send-link-to-friend');
 		}
 		else
 		{
-			echo "There was a problem with the request.";
+			//echo "There was a problem with the request.";
+			_e('There was a problem with the request.', 'send-link-to-friend');
 		}
 	}
 	else 
 	{
 		echo "Invalid security code.";
+		//_e('Invalid security code.', 'send-link-to-friend');
 	}
 ?>

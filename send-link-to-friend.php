@@ -1,10 +1,9 @@
 <?php
-
 /*
 Plugin Name: Send link to friend
 Description: If user thought the page is useful to their friend, he can send the page link using this plug-in.
 Author: Gopi.R
-Version: 10.1
+Version: 10.2
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
@@ -14,6 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 function gSendtofriend()
 {
+	$display = "";
 	if(is_home() && get_option('gSendtofriend_On_Homepage') == 'YES') {	$display = "show";	}
 	if(is_single() && get_option('gSendtofriend_On_Posts') == 'YES') {	$display = "show";	}
 	if(is_page() && get_option('gSendtofriend_On_Pages') == 'YES') {	$display = "show";	}
@@ -35,11 +35,11 @@ function gSendtofriend()
 		}
 		?>
 		<div style='padding-top:4px;'><span id="send-link-to-friend-result"></span></div>
-		<div class="gtitle" style='padding-top:4px;'>Friend Email</div>
+		<div class="gtitle" style='padding-top:4px;'><?php _e('Friend Email', 'send-link-to-friend'); ?></div>
 		<div><input name="txt_friendemail" class="gtextbox" type="text" id="txt_friendemail" maxlength="120"></div>
-		<div class="gtitle" style='padding-top:4px;'>Enter your message</div>
+		<div class="gtitle" style='padding-top:4px;'><?php _e('Enter your message', 'send-link-to-friend'); ?></div>
 		<div><textarea name="txt_friendmessage" class="gtextarea" rows="3" id="txt_friendmessage"></textarea></div>
-		<div class="gtitle" style='padding-top:4px;'> Enter below security code </div>
+		<div class="gtitle" style='padding-top:4px;'><?php _e('Enter below security code', 'send-link-to-friend'); ?></div>
 		<div>
 			<input name="txt_captcha" class="gtextbox" type="text" id="txt_captcha" maxlength="6">
 		</div>
@@ -60,6 +60,7 @@ function gSendtofriend_shortcode($atts)
 	//[send-link-to-friend]
 	
 	global $wpdb;
+	$gSend = "";
 	$sendlinks = "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'];
 	$_sm = get_option('gSendtofriend_title_sm');
 	$pluginlink = "'" . get_option('siteurl') . "/wp-content/plugins/send-link-to-friend/'";
@@ -74,11 +75,11 @@ function gSendtofriend_shortcode($atts)
 	}
 	
 	$gSend = $gSend . '<div style="padding-top:2px;"><span id="send-link-to-friend-result"></span></div>';
-	$gSend = $gSend . '<div class="gtitlepage" style="padding-top:2px;">Friend Email</div>';
+	$gSend = $gSend . '<div class="gtitlepage" style="padding-top:2px;">'.__('Friend Email', 'send-link-to-friend').'</div>';
 	$gSend = $gSend . '<div><input name="txt_friendemail" class="gtextboxpage" type="text" id="txt_friendemail" maxlength="120"></div>';
-	$gSend = $gSend . '<div class="gtitlepage" style="padding-top:2px;">Enter your message</div>';
+	$gSend = $gSend . '<div class="gtitlepage" style="padding-top:2px;">'.__('Enter your message', 'send-link-to-friend').'</div>';
 	$gSend = $gSend . '<div><textarea name="txt_friendmessage" class="gtextareapage" rows="3" id="txt_friendmessage"></textarea></div>';
-	$gSend = $gSend . '<div class="gtitlepage" style="padding-top:2px;">Enter below security code</div>';
+	$gSend = $gSend . '<div class="gtitlepage" style="padding-top:2px;">'.__('Enter below security code', 'send-link-to-friend').'</div>';
 	$gSend = $gSend . '<div>';
 	$gSend = $gSend . '<input name="txt_captcha" class="gtextbox" type="text" id="txt_captcha" maxlength="6">';
 	$gSend = $gSend . '</div>';
@@ -108,6 +109,7 @@ function gSendtofriend_install()
 
 function gSendtofriend_widget($args) 
 {
+	$display = "";
 	if(is_home() && get_option('gSendtofriend_On_Homepage') == 'YES') {	$display = "show";	}
 	if(is_single() && get_option('gSendtofriend_On_Posts') == 'YES') {	$display = "show";	}
 	if(is_page() && get_option('gSendtofriend_On_Pages') == 'YES') {	$display = "show";	}
@@ -127,20 +129,25 @@ function gSendtofriend_widget($args)
 	
 function gSendtofriend_control() 
 {
-	echo '<p>To change the setting, Go to <b>Send link to friend</b> page on <b>Settings</b> menu.';
-	echo '<br><a href="options-general.php?page=send-link-to-friend">click here</a>.</p>';
+	echo '<p><b>';
+	_e('Send link to friend', 'send-link-to-friend');
+	echo '.</b> ';
+	_e('Check official website for more information', 'send-link-to-friend');
+	?> <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/"><?php _e('click here', 'send-link-to-friend'); ?></a></p><?php
 }
 
 function gSendtofriend_widget_init()
 {
 	if(function_exists('wp_register_sidebar_widget')) 
 	{
-		wp_register_sidebar_widget('Send link to friend', 'Send link to friend', 'gSendtofriend_widget');
+		wp_register_sidebar_widget( __('Send link to friend', 'send-link-to-friend'), 
+				__('Send link to friend', 'send-link-to-friend'), 'gSendtofriend_widget');
 	}
 	
 	if(function_exists('wp_register_widget_control')) 
 	{
-		wp_register_widget_control('Send link to friend', array('Send link to friend', 'widgets'), 'gSendtofriend_control');
+		wp_register_widget_control( __('Send link to friend', 'send-link-to-friend'), 
+				array( __('Send link to friend', 'send-link-to-friend'), 'widgets'), 'gSendtofriend_control');
 	} 
 }
 
@@ -159,7 +166,8 @@ function gSendtofriend_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page('Send link to friend', 'Send link to friend', 'manage_options', 'send-link-to-friend', 'gSendtofriend_admin_options' );
+		add_options_page( __('Send link to friend', 'send-link-to-friend'), 
+				__('Send link to friend', 'send-link-to-friend'), 'manage_options', 'send-link-to-friend', 'gSendtofriend_admin_options' );
 	}
 }
 
@@ -172,6 +180,12 @@ function gSendtofriend_add_javascript_files()
 	}
 }
 
+function gSendtofriend_textdomain() 
+{
+	  load_plugin_textdomain( 'send-link-to-friend', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action('plugins_loaded', 'gSendtofriend_textdomain');
 add_action('wp_enqueue_scripts', 'gSendtofriend_add_javascript_files');
 add_action('admin_menu', 'gSendtofriend_add_to_menu');
 add_action("plugins_loaded", "gSendtofriend_widget_init");
