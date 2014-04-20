@@ -2,14 +2,16 @@
 /*
 Plugin Name: Send link to friend
 Description: If user thought the page is useful to their friend, he can send the page link using this plug-in.
-Author: Gopi.R
-Version: 10.2
+Author: Gopi Ramasamy
+Version: 10.3
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
 function gSendtofriend()
 {

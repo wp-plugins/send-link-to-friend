@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	
 	$gSendtofriend_abspath = dirname(__FILE__);
 	$gSendtofriend_abspath_1 = str_replace('wp-content/plugins/send-link-to-friend', '', $gSendtofriend_abspath);
 	$gSendtofriend_abspath_1 = str_replace('wp-content\plugins\send-link-to-friend', '', $gSendtofriend_abspath_1);
@@ -11,7 +10,7 @@
 	$gSendtofriend_fromemail = get_option('gSendtofriend_fromemail');
 	$txt_captcha = $_POST['txt_captcha'];
 	
-	if( $_SESSION['sendlinktofriend_code'] == mysql_real_escape_string(trim($txt_captcha)) && !empty($_SESSION['sendlinktofriend_code'] ) ) 
+	if( $_SESSION['sendlinktofriend_code'] == esc_sql(trim($txt_captcha)) && !empty($_SESSION['sendlinktofriend_code'] ) ) 
 	{
 		
 		$headers  = "From: \"" . $gSendtofriend_fromname . "\" <$gSendtofriend_fromemail>\n";
@@ -26,7 +25,7 @@
 		$to_message = "A friend has sent you a link to ". $site_name . ".<br><br>";
 		$to_message = $to_message . $_POST['sendlink'];
 		$to_message = $to_message ."<br><br>";
-		$to_message = $to_message . mysql_real_escape_string($_POST['txt_friendmessage']);
+		$to_message = $to_message . esc_sql($_POST['txt_friendmessage']);
 		$to_message = $to_message ."<br><br>";
 		$to_message = $to_message ."Thanks";
 		$to_message = $to_message ."<br>";
