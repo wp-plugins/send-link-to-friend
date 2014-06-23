@@ -1,31 +1,33 @@
 .gtextbox 
 {
-	width:150px;
+	/*width:100%;*/
 }
 .gtextarea 
 {
-	width:180px;
+	/*width:100%;*/
 	height:50px;
 }
 .gtitle 
 {
-	width:150px;
+	/*width:100%;*/
+	padding-bottom:6px;
+	padding-top:6px;
 }
 .gtextboxpage
 {
-	width:200px;
+	/*width:100%;*/
 	line-height:0px;
 }
 .gtextareapage
 {
-	width:280px;
+	/*width:100%;*/
 	height:80px;
 }
 .gtitlepage
 {
-	width:280px;
+	/*width:100%;*/
 }
 .gsmpage
 {
-	color:#336699;
+	color:#990000;
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Send link to friend\n"
-"POT-Creation-Date: 2014-04-20 00:42+0800\n"
-"PO-Revision-Date: 2014-04-20 00:42+0800\n"
+"POT-Creation-Date: 2014-06-23 21:03+0800\n"
+"PO-Revision-Date: 2014-06-23 21:03+0800\n"
 "Last-Translator: \n"
 "Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,113 +13,135 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../content-setting.php:6 ../send-link-to-friend.php:135
-#: ../send-link-to-friend.php:145 ../send-link-to-friend.php:146
-#: ../send-link-to-friend.php:151 ../send-link-to-friend.php:152
-#: ../send-link-to-friend.php:171 ../send-link-to-friend.php:172
+#: ../content-setting.php:6 ../send-link-to-friend.php:130
+#: ../send-link-to-friend.php:140 ../send-link-to-friend.php:141
+#: ../send-link-to-friend.php:146 ../send-link-to-friend.php:147
+#: ../send-link-to-friend.php:166 ../send-link-to-friend.php:167
 msgid "Send link to friend"
 msgstr ""
 
-#: ../content-setting.php:45
+#: ../content-setting.php:54
 msgid "Details successfully updated."
 msgstr ""
 
-#: ../content-setting.php:51
+#: ../content-setting.php:60
 msgid "Plugin setting"
 msgstr ""
 
-#: ../content-setting.php:53
+#: ../content-setting.php:62
 msgid "Widget title"
 msgstr ""
 
-#: ../content-setting.php:55
+#: ../content-setting.php:64
 msgid "Please enter your widget title."
 msgstr ""
 
-#: ../content-setting.php:57
+#: ../content-setting.php:66
 msgid "Small description"
 msgstr ""
 
-#: ../content-setting.php:59
+#: ../content-setting.php:68
 msgid "Please enter your small description."
 msgstr ""
 
-#: ../content-setting.php:61
-msgid "From email name"
+#: ../content-setting.php:70
+msgid "Email Details"
 msgstr ""
 
-#: ../content-setting.php:63
-msgid "Please enter your email from name."
+#: ../content-setting.php:72
+msgid "Email subject"
 msgstr ""
 
-#: ../content-setting.php:65
-msgid "From email address"
-msgstr ""
-
-#: ../content-setting.php:67
-msgid "Please enter your from email address."
-msgstr ""
-
-#: ../content-setting.php:69
-msgid "Display option"
-msgstr ""
-
-#: ../content-setting.php:71
-msgid "Display on home page"
+#: ../content-setting.php:74
+msgid "Please enter email subject."
 msgstr ""
 
 #: ../content-setting.php:76
-msgid "Do you want to show this widget in home page?"
+msgid "From email name"
 msgstr ""
 
 #: ../content-setting.php:78
-msgid "Display on posts"
+msgid "Please enter email from name."
 msgstr ""
 
-#: ../content-setting.php:83
-msgid "Do you want to show this widget in all posts?"
+#: ../content-setting.php:80
+msgid "From email address"
 msgstr ""
 
-#: ../content-setting.php:85
-msgid "Display on pages"
+#: ../content-setting.php:82
+msgid "Please enter from email address."
+msgstr ""
+
+#: ../content-setting.php:84
+msgid "Mail content"
+msgstr ""
+
+#: ../content-setting.php:86
+msgid "Please enter email content."
+msgstr ""
+
+#: ../content-setting.php:88
+msgid "Display option"
 msgstr ""
 
 #: ../content-setting.php:90
-msgid "Do you want to show this widget in all pages?"
-msgstr ""
-
-#: ../content-setting.php:94
-msgid "Submit"
+msgid "Display on home page"
 msgstr ""
 
 #: ../content-setting.php:95
+msgid "Do you want to show this widget in home page?"
+msgstr ""
+
+#: ../content-setting.php:97
+msgid "Display on posts"
+msgstr ""
+
+#: ../content-setting.php:102
+msgid "Do you want to show this widget in all posts?"
+msgstr ""
+
+#: ../content-setting.php:104
+msgid "Display on pages"
+msgstr ""
+
+#: ../content-setting.php:109
+msgid "Do you want to show this widget in all wp pages?"
+msgstr ""
+
+#: ../content-setting.php:111
+msgid "Security Check (Spam Stopper)"
+msgstr ""
+
+#: ../content-setting.php:112
+msgid "Home URL"
+msgstr ""
+
+#: ../content-setting.php:114
+msgid ""
+"This home URL is for security check. We can submit the form only on this "
+"website. "
+msgstr ""
+
+#: ../content-setting.php:118
+msgid "Submit"
+msgstr ""
+
+#: ../content-setting.php:119
 msgid "Help"
 msgstr ""
 
-#: ../content-setting.php:100 ../send-link-to-friend.php:137
+#: ../content-setting.php:124 ../send-link-to-friend.php:132
 msgid "Check official website for more information"
 msgstr ""
 
-#: ../content-setting.php:101 ../send-link-to-friend.php:138
+#: ../content-setting.php:125 ../send-link-to-friend.php:133
 msgid "click here"
 msgstr ""
 
-#: ../send-link-to-friend.php:40 ../send-link-to-friend.php:80
+#: ../send-link-to-friend.php:41 ../send-link-to-friend.php:71
 msgid "Friend Email"
 msgstr ""
 
-#: ../send-link-to-friend.php:42 ../send-link-to-friend.php:82
+#: ../send-link-to-friend.php:43 ../send-link-to-friend.php:73
 msgid "Enter your message"
-msgstr ""
-
-#: ../send-link-to-friend.php:44 ../send-link-to-friend.php:84
-msgid "Enter below security code"
-msgstr ""
-
-#: ../send-mail.php:38
-msgid "Mail sent successfully."
-msgstr ""
-
-#: ../send-mail.php:43
-msgid "There was a problem with the request."
 msgstr ""

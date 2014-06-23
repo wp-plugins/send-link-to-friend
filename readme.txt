@@ -5,12 +5,12 @@ Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 10.3
+Tested up to: 3.9.1
+Stable tag: 10.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-If user thought the page is useful to their friend, he can send the page link using this plug-in.
+If the user thought the content is useful to their friend, they can use this form to send the URL instead of copy and paste the URL into email.
 
 == Description ==
 
@@ -30,8 +30,8 @@ Send link to friend WordPress plug-in will create a simple form in the website t
 3. Easy style-override.
 4. Widgets, so you can add pretty much anything.
 5. Easy installation.
-6. Ajax, so no page refresh.
-7. Captcha to avoid spam.
+6. Ajax, Thus no page refresh.
+7. Domain security check before submit the form.
 8. Option to add the form into pages/posts
 
 == Installation ==
@@ -40,12 +40,21 @@ Send link to friend WordPress plug-in will create a simple form in the website t
 
 == Frequently Asked Questions ==
 
-**What is Display Option?**			
-**Where to set the from name and from email?**			
-**How to change the captcha color?**			
+Q1. What is Display Option?	
+
+Q1. Where to set the from name and from email?
+		
+Q1. How to change the captcha color?
+	
 [Answer](http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/) 
   
 == Upgrade Notice ==
+
+= 10.4 =
+
+1. Captcha removed from the plugin. Instead security check has been added in Send to Link form submit page. With this new option Send to Link form accept submission only from your website domain. It simply reject the submission other then you website domain. After plugin upgrade, Please deactivate and activate the plugin once.
+
+2. Option to update Mail Subject and Mail Content from admin.
 
 = 10.3 =
 
@@ -120,6 +129,12 @@ This is the first version.
 2. Admin page screen. http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 
 == Changelog ==
+
+= 10.4 =
+
+1. Captcha removed from the plugin. Instead security check has been added in Send to Link form submit page. With this new option Send to Link form accept submission only from your website domain. It simply reject the submission other then you website domain. After plugin upgrade, Please deactivate and activate the plugin once.
+
+2. Option to update Mail Subject and Mail Content from admin.
 
 = 10.3 =
 

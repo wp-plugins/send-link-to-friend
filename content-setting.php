@@ -14,6 +14,9 @@
 	$gSendtofriend_On_Pages = get_option('gSendtofriend_On_Pages');
 	$gSendtofriend_On_Search = get_option('gSendtofriend_On_Search');
 	$gSendtofriend_On_Archives = get_option('gSendtofriend_On_Archives');
+	$gSendtofriend_homeurl = get_option('gSendtofriend_homeurl');
+	$gSendtofriend_mailcontent = get_option('gSendtofriend_mailcontent');
+	$gSendtofriend_subject = get_option('gSendtofriend_subject');
 	
 	if (isset($_POST['gSendtofriend_form_submit']) && $_POST['gSendtofriend_form_submit'] == 'yes')
 	{
@@ -29,6 +32,9 @@
 		$gSendtofriend_On_Pages = stripslashes(trim($_POST['gSendtofriend_On_Pages']));
 		//$gSendtofriend_On_Search = stripslashes(trim($_POST['gSendtofriend_On_Search']));
 		//$gSendtofriend_On_Archives = stripslashes(trim($_POST['gSendtofriend_On_Archives']));
+		$gSendtofriend_homeurl = stripslashes(trim($_POST['gSendtofriend_homeurl']));
+		$gSendtofriend_mailcontent = stripslashes(trim($_POST['gSendtofriend_mailcontent']));
+		$gSendtofriend_subject = stripslashes(trim($_POST['gSendtofriend_subject']));
 		
 		update_option('gSendtofriend_title', $gSendtofriend_title );
 		update_option('gSendtofriend_title_sm', $gSendtofriend_title_sm );
@@ -39,6 +45,9 @@
 		update_option('gSendtofriend_On_Pages', $gSendtofriend_On_Pages );
 		//update_option('gSendtofriend_On_Search', $gSendtofriend_On_Search );
 		//update_option('gSendtofriend_On_Archives', $gSendtofriend_On_Archives );
+		update_option('gSendtofriend_homeurl', $gSendtofriend_homeurl );
+		update_option('gSendtofriend_mailcontent', $gSendtofriend_mailcontent );
+		update_option('gSendtofriend_subject', $gSendtofriend_subject );
 		
 		?>
 		<div class="updated fade">
@@ -55,16 +64,26 @@
 		<p><?php _e('Please enter your widget title.', 'send-link-to-friend'); ?></p>
 		
 		<label for="tag-width"><?php _e('Small description', 'send-link-to-friend'); ?></label>
-		<input name="gSendtofriend_title_sm" type="text" value="<?php echo $gSendtofriend_title_sm; ?>"  id="gSendtofriend_title_sm" size="100" maxlength="500">
+		<input name="gSendtofriend_title_sm" type="text" value="<?php echo $gSendtofriend_title_sm; ?>"  id="gSendtofriend_title_sm" size="50" maxlength="500">
 		<p><?php _e('Please enter your small description.', 'send-link-to-friend'); ?></p>
+		
+		<h3><?php _e('Email Details', 'send-link-to-friend'); ?></h3>
+		
+		<label for="tag-width"><?php _e('Email subject', 'send-link-to-friend'); ?></label>
+		<input name="gSendtofriend_subject" type="text" value="<?php echo $gSendtofriend_subject; ?>"  id="gSendtofriend_subject" size="50" maxlength="500">
+		<p><?php _e('Please enter email subject.', 'send-link-to-friend'); ?></p>
 		
 		<label for="tag-width"><?php _e('From email name', 'send-link-to-friend'); ?></label>
 		<input name="gSendtofriend_fromname" type="text" value="<?php echo $gSendtofriend_fromname; ?>"  id="gSendtofriend_fromname" size="50" maxlength="500">
-		<p><?php _e('Please enter your email from name.', 'send-link-to-friend'); ?></p>
+		<p><?php _e('Please enter email from name.', 'send-link-to-friend'); ?></p>
 		
 		<label for="tag-width"><?php _e('From email address', 'send-link-to-friend'); ?></label>
 		<input name="gSendtofriend_fromemail" type="text" value="<?php echo $gSendtofriend_fromemail; ?>"  id="gSendtofriend_fromemail" size="50" maxlength="500">
-		<p><?php _e('Please enter your from email address.', 'send-link-to-friend'); ?></p>
+		<p><?php _e('Please enter from email address.', 'send-link-to-friend'); ?></p>
+		
+		<label for="tag-width"><?php _e('Mail content', 'send-link-to-friend'); ?></label>
+		<textarea size="100" id="gSendtofriend_mailcontent" rows="10" cols="60" name="gSendtofriend_mailcontent"><?php echo esc_html(stripslashes($gSendtofriend_mailcontent)); ?></textarea>
+		<p><?php _e('Please enter email content.', 'send-link-to-friend'); ?> Keywords : ###SITENAME###, ###SENDLINK###, ###MESSAGE###</p>
 		
 		<h3><?php _e('Display option', 'send-link-to-friend'); ?></h3>
 		
@@ -87,7 +106,12 @@
 			<option value='YES' <?php if($gSendtofriend_On_Pages == 'YES') { echo "selected='selected'" ; } ?>>Yes</option>
 			<option value='NO' <?php if($gSendtofriend_On_Pages == 'NO') { echo "selected='selected'" ; } ?>>No</option>
 		</select>
-		<p><?php _e('Do you want to show this widget in all pages?', 'send-link-to-friend'); ?></p>
+		<p><?php _e('Do you want to show this widget in all wp pages?', 'send-link-to-friend'); ?></p>
+		
+		<h3><?php _e('Security Check (Spam Stopper)', 'send-link-to-friend'); ?></h3>
+		<label for="tag-width"><?php _e('Home URL', 'send-link-to-friend'); ?></label>
+		<input name="gSendtofriend_homeurl" type="text" value="<?php echo $gSendtofriend_homeurl; ?>"  id="gSendtofriend_homeurl" size="50" maxlength="500">
+		<p><?php _e('This home URL is for security check. We can submit the form only on this website. ', 'send-link-to-friend'); ?></p>
 		
 		<p class="submit">
 		<input type="hidden" name="gSendtofriend_form_submit" value="yes"/>
