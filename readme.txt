@@ -5,8 +5,8 @@ Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 10.5
+Tested up to: 4.1
+Stable tag: 10.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,10 @@ Q1. How to change the captcha color?
 [Answer](http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/) 
   
 == Upgrade Notice ==
+
+= 10.6 =
+
+1. Tested up to 4.1
 
 = 10.5 =
 
@@ -133,6 +137,10 @@ This is the first version.
 2. Admin page screen. http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 
 == Changelog ==
+
+= 10.6 =
+
+1. Tested up to 4.1
 
 = 10.5 =
 
