@@ -3,7 +3,7 @@
 Plugin Name: Send link to friend
 Description: If the user thought the content is useful to their friend, they can use this form to send the URL instead of copy and paste the URL into email.
 Author: Gopi Ramasamy
-Version: 10.7
+Version: 10.8
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Author URI: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
 Donate link: http://www.gopiplus.com/work/2010/07/18/send-link-to-friend/
